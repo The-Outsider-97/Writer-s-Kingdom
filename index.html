@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writer's Studio · Books & Stories</title>
+    <link rel="icon" type="image/x-icon" href="img/Icon02.png" />
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Mammoth.js for .docx rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="app-container">
+    <header class="app-header">
+        <i class="fas fa-feather-alt"></i>
+        <h1>manuscript • workshop</h1>
+    </header>
+
+    <div class="main-grid">
+        <!-- LEFT PANEL: library + upload -->
+        <div class="panel panel-left">
+            <div class="upload-area">
+                <div class="upload-btn-wrapper">
+                    <button class="upload-btn" id="uploadBtn"><i class="fas fa-cloud-upload-alt"></i> Upload file</button>
+                    <input type="file" id="fileInput" accept=".pdf,.docx,.txt" multiple>
+                </div>
+                <small style="display: block; margin-top: 8px; color: #3d5f8a;">PDF · DOCX · TXT</small>
+            </div>
+            <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-book-open" style="margin-right: 8px;"></i>Your library</h3>
+            <ul class="file-list" id="fileList">
+                <li class="empty-state" style="list-style: none;">No files yet — upload something</li>
+            </ul>
+        </div>
+
+        <!-- CENTER PANEL: viewer + comments + read-mode toggle -->
+        <div class="panel panel-center" id="centerPanel">
+            <div class="viewer-header">
+                <span class="viewer-title" id="viewerTitle">📖 select a file</span>
+                <div class="viewer-toolbar">
+                    <button class="readmode-btn" id="readModeToggle"><i class="fas fa-eye"></i> Read mode</button>
+                </div>
+            </div>
+            <div class="viewer-content" id="viewerContent">
+                <div class="empty-state">⬆️ upload a .txt, .docx or .pdf to start</div>
+            </div>
+
+            <!-- comment block -->
+            <div class="comment-section">
+                <h3><i class="far fa-comment-dots"></i> comments</h3>
+                <div class="comment-list" id="commentList"></div>
+                <div class="comment-input-area">
+                    <input type="text" id="commentInput" placeholder="add a note..." autocomplete="off">
+                    <button id="addCommentBtn" disabled><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: writer tools -->
+        <div class="panel panel-right">
+            <div class="tool-section">
+                <h3><i class="fas fa-paint-brush"></i> style theories</h3>
+                <div class="tool-card">
+                    <h4>Show, don't tell</h4>
+                    <p>Describe sensations, actions, and dialogue to convey emotion — let readers infer.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Stream of consciousness</h4>
+                    <p>Narrative that flows through a character's thoughts, often disjointed but deeply personal.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Epistolary</h4>
+                    <p>Told through documents: letters, diary entries, emails — creates intimacy.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Chekhov's gun</h4>
+                    <p>Every element must be necessary; remove anything irrelevant to the story.</p>
+                </div>
+            </div>
+            <div class="tool-section">
+                <h3><i class="fas fa-sitemap"></i> story structures</h3>
+                <div class="tool-card">
+                    <h4>Three‑act</h4>
+                    <p>Setup, confrontation, resolution — classic Hollywood rhythm.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>The Hero's Journey</h4>
+                    <p>Departure, initiation, return — Campbell's monomyth with stages like 'crossing the threshold'.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Fichtean curve</h4>
+                    <p>Rapid rising action, few falling actions — many modern novels use this.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>In medias res</h4>
+                    <p>Start in the middle of action, then fill in backstory via flashbacks.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Save the Cat</h4>
+                    <p>15 beat structure (opening image, catalyst, midpoint, etc.) for screenplays.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/script.js"></script>
+</body>
+</html>
