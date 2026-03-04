@@ -8,6 +8,7 @@
     const commentInput = document.getElementById('commentInput');
     const addCommentBtn = document.getElementById('addCommentBtn');
     const readModeToggle = document.getElementById('readModeToggle');
+    const STORAGE_KEY = 'wk_reader_state_v1';
 
     if (!uploadBtn) return;
 
@@ -18,6 +19,45 @@
     const generateId = () => '_' + Math.random().toString(36).slice(2, 11);
 
     const escapeHtml = (unsafe = '') => unsafe.replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+
+    function saveState() {
+        const state = {
+            files,
+            currentFileId,
+            readModeActive
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+        const rawState = localStorage.getItem(STORAGE_KEY);
+        if (!rawState) return;
+
+        try {
+            const state = JSON.parse(rawState);
+            if (!Array.isArray(state.files)) return;
+
+            state.files.forEach((file) => {
+                files.push({
+                    id: file.id || generateId(),
+                    name: file.name || 'Untitled',
+                    type: file.type || 'text/plain',
+                    extension: file.extension || 'TXT',
+                    comments: Array.isArray(file.comments) ? file.comments : [],
+                    content: file.content || null,
+                    pdfDataUrl: file.pdfDataUrl || null
+                });
+            });
+
+            if (typeof state.currentFileId === 'string' && files.some((f) => f.id === state.currentFileId)) {
+                currentFileId = state.currentFileId;
+            }
+            readModeActive = Boolean(state.readModeActive);
+            readModeToggle.innerHTML = readModeActive ? '<i class="fas fa-eye-slash"></i> Normal mode' : '<i class="fas fa-eye"></i> Read mode';
+        } catch {
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    }
 
     function renderFileList() {
         if (!files.length) {
@@ -60,8 +100,8 @@
             viewerContent.innerHTML = `<pre style="white-space: pre-wrap;">${escapeHtml(file.content)}</pre>`;
         } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
             viewerContent.innerHTML = file.content;
-        } else if (file.type === 'application/pdf' && file.blobUrl) {
-            viewerContent.innerHTML = `<iframe class="pdf-frame" src="${file.blobUrl}" title="PDF"></iframe>`;
+        } else if (file.type === 'application/pdf' && file.pdfDataUrl) {
+            viewerContent.innerHTML = `<iframe class="pdf-frame" src="${file.pdfDataUrl}" title="PDF"></iframe>`;
         } else {
             viewerContent.textContent = 'Unsupported file.';
         }
@@ -75,6 +115,7 @@
         currentFileId = id;
         renderFileList();
         renderViewer();
+        saveState();
     }
 
     function addComment() {
@@ -92,6 +133,7 @@
 
         commentInput.value = '';
         renderComments(file);
+        saveState();
     }
 
     function handleUpload(file) {
@@ -102,7 +144,7 @@
             type: file.type,
             extension: file.name.split('.').pop().toUpperCase(),
             comments: [],
-            blobUrl: null,
+            pdfDataUrl: null,
             content: null
         };
 
@@ -112,6 +154,7 @@
                 files.push(fileObj);
                 selectFile(fileObj.id);
                 renderFileList();
+                saveState();
             };
             reader.readAsText(file);
         } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
@@ -122,23 +165,26 @@
                         files.push(fileObj);
                         selectFile(fileObj.id);
                         renderFileList();
+                        saveState();
                     })
                     .catch(() => {
                         fileObj.content = '<p>Could not parse this DOCX file.</p>';
                         files.push(fileObj);
                         selectFile(fileObj.id);
                         renderFileList();
+                        saveState();
                     });
             };
             reader.readAsArrayBuffer(file);
         } else if (file.type === 'application/pdf') {
             reader.onload = (e) => {
-                fileObj.blobUrl = URL.createObjectURL(new Blob([e.target.result], { type: 'application/pdf' }));
+                fileObj.pdfDataUrl = e.target.result;
                 files.push(fileObj);
                 selectFile(fileObj.id);
                 renderFileList();
+                saveState();
             };
-            reader.readAsArrayBuffer(file);
+            reader.readAsDataURL(file);
         } else {
             alert('Only .pdf, .docx, .txt files are accepted.');
         }
@@ -160,8 +206,10 @@
         readModeActive = !readModeActive;
         readModeToggle.innerHTML = readModeActive ? '<i class="fas fa-eye-slash"></i> Normal mode' : '<i class="fas fa-eye"></i> Read mode';
         renderViewer();
+        saveState();
     });
 
+    loadState();
     renderFileList();
     renderViewer();
 })();
