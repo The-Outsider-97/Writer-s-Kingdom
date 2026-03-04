@@ -50,21 +50,57 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
     margin-bottom: 12px;
+}
+
+.viewer-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.viewer-height-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 10px;
+    background: var(--surface);
+    font-weight: 600;
+}
+
+.viewer-height-control input {
+    width: 120px;
 }
 
 .viewer-content {
     min-height: 320px;
+    height: var(--viewer-height, 520px);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 16px;
     overflow: auto;
+    transition: height 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+
+.reader-layout.read-focus-active .read-focus-dim {
+    filter: blur(3px) brightness(0.35);
+    pointer-events: none;
 }
 
 .viewer-content.read-mode {
     font-size: 1.12rem;
     line-height: 1.8;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6), 0 30px 60px rgba(0, 0, 0, 0.4);
+    border-color: color-mix(in srgb, var(--primary), var(--border) 60%);
 }
 
 .pdf-frame {
@@ -112,8 +148,32 @@
     border-radius: 8px;
 }
 
+#commentPageInput {
+    flex: 0 0 90px;
+}
+
+.comment-page-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-top: 6px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 8px;
+    background: var(--surface-soft);
+}
+
 @media (max-width: 900px) {
     .reader-layout {
         grid-template-columns: 1fr;
+    }
+
+    .viewer-height-control {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .viewer-height-control input {
+        width: 100%;
+        max-width: 180px;
     }
 }
