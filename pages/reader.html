@@ -26,7 +26,7 @@
         </nav>
     </header>
     <main class="page-content reader-layout">
-        <aside class="panel">
+        <aside class="panel" id="libraryPanel">
             <div class="upload-btn-wrapper">
                 <button class="upload-btn" id="uploadBtn"><i class="fas fa-cloud-upload-alt"></i> Upload file</button>
                 <input type="file" id="fileInput" accept=".pdf,.docx,.txt" multiple>
@@ -37,7 +37,14 @@
         <section class="panel">
             <div class="viewer-header">
                 <span id="viewerTitle">📖 Select a file</span>
-                <button class="readmode-btn" id="readModeToggle"><i class="fas fa-eye"></i> Read mode</button>
+                <div class="viewer-controls">
+                    <label for="viewerHeightRange" class="viewer-height-control">
+                        <span>Height</span>
+                        <input type="range" id="viewerHeightRange" min="320" max="1000" step="20" value="520">
+                    </label>
+                    <button class="readmode-btn" id="fitViewerBtn"><i class="fas fa-expand-arrows-alt"></i> Fit format</button>
+                    <button class="readmode-btn" id="readModeToggle"><i class="fas fa-eye"></i> Read mode</button>
+                </div>
             </div>
             <div class="viewer-content" id="viewerContent"></div>
             <div class="comment-section">
@@ -45,6 +52,7 @@
                 <div class="comment-list" id="commentList"></div>
                 <div class="comment-input-area">
                     <input type="text" id="commentInput" placeholder="Add a note..." autocomplete="off">
+                    <input type="number" id="commentPageInput" min="1" placeholder="Page #" aria-label="Comment page number">
                     <button class="primary-btn" id="addCommentBtn" disabled><i class="fas fa-paper-plane"></i></button>
                 </div>
             </div>
