@@ -1,0 +1,8 @@
+.structures-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.structure-item {
+    border-left: 4px solid var(--primary);
+}

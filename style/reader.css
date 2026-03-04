@@ -1,0 +1,119 @@
+.reader-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 16px;
+}
+
+.upload-btn,
+.readmode-btn,
+.primary-btn {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.upload-btn:hover,
+.readmode-btn:hover,
+.primary-btn:hover {
+    border-color: var(--primary);
+}
+
+.upload-btn-wrapper input {
+    display: none;
+}
+
+.file-list {
+    list-style: none;
+    margin-top: 12px;
+    display: grid;
+    gap: 6px;
+}
+
+.file-list li {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.file-list li.active {
+    border-color: var(--primary);
+    background: var(--primary-soft);
+}
+
+.viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.viewer-content {
+    min-height: 320px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    overflow: auto;
+}
+
+.viewer-content.read-mode {
+    font-size: 1.12rem;
+    line-height: 1.8;
+}
+
+.pdf-frame {
+    width: 100%;
+    min-height: 460px;
+    border: none;
+}
+
+.comment-section {
+    margin-top: 14px;
+}
+
+.comment-list {
+    max-height: 180px;
+    overflow: auto;
+    display: grid;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.comment-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.comment-meta {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-top: 4px;
+}
+
+.comment-input-area {
+    display: flex;
+    gap: 8px;
+}
+
+.comment-input-area input {
+    flex: 1;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+    .reader-layout {
+        grid-template-columns: 1fr;
+    }
+}
