@@ -1,6 +1,18 @@
 .hero {
     display: grid;
-    gap: 14px;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: clamp(1.6rem, 3.3vw, 2.1rem);
+}
+
+.hero p {
+    max-width: 72ch;
+}
+
+.home-section {
     margin-bottom: 18px;
 }
 
@@ -8,6 +20,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 12px;
+    margin-top: 12px;
 }
 
 .quick-link {
@@ -17,8 +30,44 @@
     background: var(--surface);
     border-radius: 12px;
     padding: 16px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.quick-link h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
 }
 
 .quick-link:hover {
     border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.section-intro {
+    margin: 8px 0 14px;
+}
+
+.page-previews {
+    align-items: stretch;
+}
+
+.preview-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preview-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.preview-link {
+    margin-top: auto;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary);
 }
