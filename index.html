@@ -3,112 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writer's Studio · Books & Stories</title>
+    <title>Home · Writer's Kingdom</title>
     <link rel="icon" type="image/x-icon" href="img/Icon02.png" />
     <link rel="stylesheet" href="style/style.css">
-
-    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="style/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Mammoth.js for .docx rendering -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<div class="app-container">
+<body data-page="home">
+<div class="app-shell">
     <header class="app-header">
-        <i class="fas fa-feather-alt"></i>
-        <h1>manuscript • workshop</h1>
+        <div class="header-left">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
+            <div class="brand"><i class="fas fa-feather-alt"></i><h1>writer's kingdom</h1></div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="pages/reader.html" data-page="reader">Reader</a>
+            <a href="pages/theories.html" data-page="theories">Style Theories</a>
+            <a href="pages/structures.html" data-page="structures">Story Structures</a>
+            <a href="pages/tools.html" data-page="tools">Tools</a>
+        </nav>
     </header>
 
-    <div class="main-grid">
-        <!-- LEFT PANEL: library + upload -->
-        <div class="panel panel-left">
-            <div class="upload-area">
-                <div class="upload-btn-wrapper">
-                    <button class="upload-btn" id="uploadBtn"><i class="fas fa-cloud-upload-alt"></i> Upload file</button>
-                    <input type="file" id="fileInput" accept=".pdf,.docx,.txt" multiple>
-                </div>
-                <small style="display: block; margin-top: 8px; color: #3d5f8a;">PDF · DOCX · TXT</small>
-            </div>
-            <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-book-open" style="margin-right: 8px;"></i>Your library</h3>
-            <ul class="file-list" id="fileList">
-                <li class="empty-state" style="list-style: none;">No files yet — upload something</li>
-            </ul>
-        </div>
+    <main class="page-content">
+        <section class="panel hero">
+            <p class="muted">Welcome back • <span id="todayDate"></span></p>
+            <h2>Your writing workspace in one place</h2>
+            <p>
+                Writer's Kingdom gives you a focused place to read drafts, explore craft techniques,
+                structure stories, and manage your writing workflow.
+            </p>
+        </section>
 
-        <!-- CENTER PANEL: viewer + comments + read-mode toggle -->
-        <div class="panel panel-center" id="centerPanel">
-            <div class="viewer-header">
-                <span class="viewer-title" id="viewerTitle">📖 select a file</span>
-                <div class="viewer-toolbar">
-                    <button class="readmode-btn" id="readModeToggle"><i class="fas fa-eye"></i> Read mode</button>
-                </div>
+        <section class="panel home-section">
+            <h2>Quick links</h2>
+            <div class="quick-links">
+                <a class="quick-link" href="pages/reader.html">
+                    <h3><i class="fas fa-book-open"></i> Reader</h3>
+                    <p class="muted">Open, read, and annotate manuscript files.</p>
+                </a>
+                <a class="quick-link" href="pages/theories.html">
+                    <h3><i class="fas fa-paint-brush"></i> Style Theories</h3>
+                    <p class="muted">Review writing techniques and narrative voice ideas.</p>
+                </a>
+                <a class="quick-link" href="pages/structure.html">
+                    <h3><i class="fas fa-sitemap"></i> Story Structures</h3>
+                    <p class="muted">Browse popular frameworks to shape your plot.</p>
+                </a>
+                <a class="quick-link" href="pages/tools.html">
+                    <h3><i class="fas fa-toolbox"></i> Tools</h3>
+                    <p class="muted">Organize files and arrange visual story blocks.</p>
+                </a>
             </div>
-            <div class="viewer-content" id="viewerContent">
-                <div class="empty-state">⬆️ upload a .txt, .docx or .pdf to start</div>
-            </div>
+        </section>
 
-            <!-- comment block -->
-            <div class="comment-section">
-                <h3><i class="far fa-comment-dots"></i> comments</h3>
-                <div class="comment-list" id="commentList"></div>
-                <div class="comment-input-area">
-                    <input type="text" id="commentInput" placeholder="add a note..." autocomplete="off">
-                    <button id="addCommentBtn" disabled><i class="fas fa-paper-plane"></i></button>
-                </div>
+        <section class="panel home-section">
+            <h2>Page previews</h2>
+            <p class="muted section-intro">A quick look at what each page offers before you dive in.</p>
+            <div class="card-grid page-previews">
+                <article class="info-card preview-card">
+                    <h3><i class="fas fa-book-open"></i> Reader</h3>
+                    <p>Upload .pdf, .docx, or .txt manuscripts, switch to read mode, and keep comments tied to each file while you review drafts.</p>
+                    <a href="pages/reader.html" class="preview-link">Go to Reader</a>
+                </article>
+                <article class="info-card preview-card">
+                    <h3><i class="fas fa-feather"></i> Style Theories</h3>
+                    <p>Explore concise explainers for craft techniques like show-don't-tell, stream of consciousness, and epistolary narration.</p>
+                    <a href="pages/theories.html" class="preview-link">Explore Style Theories</a>
+                </article>
+                <article class="info-card preview-card">
+                    <h3><i class="fas fa-project-diagram"></i> Story Structures</h3>
+                    <p>Compare structural models such as Three-Act, Hero's Journey, and Save the Cat to plan narrative momentum.</p>
+                    <a href="pages/structure.html" class="preview-link">View Story Structures</a>
+                </article>
+                <article class="info-card preview-card">
+                    <h3><i class="fas fa-toolbox"></i> Tools</h3>
+                    <p>Create folders, upload story assets, and map scenes in draggable blocks to build and reorder your project flow.</p>
+                    <a href="pages/tools.html" class="preview-link">Open Tools</a>
+                </article>
             </div>
-        </div>
-
-        <!-- RIGHT PANEL: writer tools -->
-        <div class="panel panel-right">
-            <div class="tool-section">
-                <h3><i class="fas fa-paint-brush"></i> style theories</h3>
-                <div class="tool-card">
-                    <h4>Show, don't tell</h4>
-                    <p>Describe sensations, actions, and dialogue to convey emotion — let readers infer.</p>
-                </div>
-                <div class="tool-card">
-                    <h4>Stream of consciousness</h4>
-                    <p>Narrative that flows through a character's thoughts, often disjointed but deeply personal.</p>
-                </div>
-                <div class="tool-card">
-                    <h4>Epistolary</h4>
-                    <p>Told through documents: letters, diary entries, emails — creates intimacy.</p>
-                </div>
-                <div class="tool-card">
-                    <h4>Chekhov's gun</h4>
-                    <p>Every element must be necessary; remove anything irrelevant to the story.</p>
-                </div>
-            </div>
-            <div class="tool-section">
-                <h3><i class="fas fa-sitemap"></i> story structures</h3>
-                <div class="tool-card">
-                    <h4>Three‑act</h4>
-                    <p>Setup, confrontation, resolution — classic Hollywood rhythm.</p>
-                </div>
-                <div class="tool-card">
-                    <h4>The Hero's Journey</h4>
-                    <p>Departure, initiation, return — Campbell's monomyth with stages like 'crossing the threshold'.</p>
-                </div>
-                <div class="tool-card">
-                    <h4>Fichtean curve</h4>
-                    <p>Rapid rising action, few falling actions — many modern novels use this.</p>
-                </div>
-                <div class="tool-card">
-                    <h4>In medias res</h4>
-                    <p>Start in the middle of action, then fill in backstory via flashbacks.</p>
-                </div>
-                <div class="tool-card">
-                    <h4>Save the Cat</h4>
-                    <p>15 beat structure (opening image, catalyst, midpoint, etc.) for screenplays.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </div>
-
-<script type="module" src="js/script.js"></script>
+<script src="js/theme-toggle.js"></script>
+<script src="js/script.js"></script>
+<script src="js/home.js"></script>
 </body>
 </html>
