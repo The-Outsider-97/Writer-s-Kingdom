@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writer Tools · Writer's Kingdom</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/tools.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-page="tools">
+<div class="app-shell">
+    <header class="app-header">
+        <div class="header-left">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
+            <div class="brand"><i class="fas fa-feather-alt"></i><h1>writer's kingdom</h1></div>
+        </div>
+        <nav class="main-nav">
+            <a href="../index.html" data-page="home">Home</a>
+            <a href="reader.html" data-page="reader">Reader</a>
+            <a href="theories.html" data-page="theories">Style Theories</a>
+            <a href="structures.html" data-page="structures">Story Structures</a>
+            <a href="tools.html" data-page="tools">Tools</a>
+        </nav>
+    </header>
+    <main class="page-content tools-layout">
+        <section class="panel">
+            <h2>Story Files</h2>
+            <div class="control-row">
+                <input id="folderName" type="text" placeholder="New folder name">
+                <button class="primary-btn" id="createFolderBtn">Create</button>
+            </div>
+            <ul id="folderList" class="folder-list"></ul>
+
+            <h3 style="margin:14px 0 8px;">Upload files</h3>
+            <input type="file" id="storyFileInput" multiple>
+            <ul id="uploadList" class="folder-list" style="margin-top:8px;"></ul>
+        </section>
+
+        <section class="panel">
+            <h2>Visual story board</h2>
+            <p class="muted" style="margin:8px 0 12px;">Add text blocks and drag them to reorganize your story flow.</p>
+            <div class="control-row">
+                <input id="blockText" type="text" placeholder="e.g., Inciting incident at the market">
+                <button class="primary-btn" id="addBlockBtn">Add block</button>
+            </div>
+            <div id="blockCanvas" class="block-canvas"></div>
+        </section>
+    </main>
+</div>
+<script src="../js/theme-toggle.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/tools.js"></script>
+</body>
+</html>
