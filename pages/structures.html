@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story Structures · Writer's Kingdom</title>
+    <link rel="icon" type="image/x-icon" href="../img/Icon02.png" />
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/structures.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
     <header class="app-header">
         <div class="header-left">
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
-            <div class="brand"><i class="fas fa-feather-alt"></i><h1>writer's kingdom</h1></div>
+            <div class="brand"><img src="../img/icon02-dark.png" alt="Logo" class="brand-logo"><h1>writer's kingdom</h1></div>
         </div>
         <nav class="main-nav">
             <a href="../index.html" data-page="home">Home</a>
@@ -26,11 +27,396 @@
     </header>
     <main class="page-content">
         <section class="panel structures-grid">
-            <article class="info-card structure-item"><h3>Three-Act Structure</h3><p class="muted">Setup, confrontation, and resolution.</p></article>
-            <article class="info-card structure-item"><h3>The Hero's Journey</h3><p class="muted">Departure, initiation, return with transformation.</p></article>
-            <article class="info-card structure-item"><h3>Fichtean Curve</h3><p class="muted">Rising crisis sequences with minimal downtime.</p></article>
-            <article class="info-card structure-item"><h3>In Medias Res</h3><p class="muted">Start in the middle and backfill context later.</p></article>
-            <article class="info-card structure-item"><h3>Save the Cat</h3><p class="muted">Fifteen beats for tight narrative momentum.</p></article>
+            <article class="info-card structure-item" data-structure-index="1">
+                <h3>1) Three-Act Structure</h3>
+                <img src="../img/3-act_structure.png" alt="3-Act Structure">
+            
+                <p class="muted">
+                    The Three‑Act Structure is the bedrock of Western narrative storytelling. Originating in Aristotle’s analysis of Greek tragedy, it divides a story into three logical parts: <strong>Setup</strong>, <strong>Confrontation</strong>, and <strong>Resolution</strong>. This framework creates a satisfying emotional arc by establishing characters, escalating conflict, and delivering a climax followed by a denouement.
+                </p>
+            
+                <h4>Historical Background</h4>
+                <p>
+                    Aristotle’s <em>Poetics</em> (c. 335 BCE) first described the need for a beginning, middle, and end — the seed of the three acts. In the early 20th century, theatre and film practitioners formalised the concept. Screenwriter Syd Field popularised the modern Hollywood version in his 1979 book <em>Screenplay</em>, defining the three acts and the crucial plot points that connect them.
+                </p>
+            
+                <h4>Detailed Breakdown of Each Act</h4>
+            
+                <h5>Act I – The Setup (approx. first 25%)</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Ordinary World</strong>: We meet the protagonist in their everyday life, learning their strengths, weaknesses, and desires.</li>
+                    <li><strong>Inciting Incident</strong>: An event that disrupts the ordinary world and presents a challenge or opportunity. This propels the protagonist into action.</li>
+                    <li><strong>First Plot Point / Key Decision</strong>: The protagonist commits to a new course of action, crossing the threshold into the central conflict. Act I ends when they can no longer turn back.</li>
+                </ul>
+            
+                <h5>Act II – The Confrontation (approx. middle 50%)</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Rising Action & Obstacles</strong>: The protagonist faces increasingly difficult challenges, meets allies and enemies, and learns the rules of the new world.</li>
+                    <li><strong>Midpoint</strong>: A major reversal or revelation raises the stakes. What seemed achievable now appears much harder; the protagonist shifts from reaction to action.</li>
+                    <li><strong>Darkest Moment / “All Is Lost”</strong>: Near the end of Act II, the protagonist suffers a crushing setback. They may abandon hope, only to find a renewed resolve based on what they’ve learned.</li>
+                </ul>
+            
+                <h5>Act III – The Resolution (approx. final 25%)</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Climax</strong>: The protagonist confronts the central conflict in a final, decisive battle (physical, emotional, or moral). The outcome determines the story’s success or failure.</li>
+                    <li><strong>Denouement / Falling Action</strong>: The aftermath shows how the characters have changed and ties up loose ends. A new equilibrium is established, different from the ordinary world of Act I.</li>
+                </ul>
+            
+                <h4>Famous Examples & Implementation</h4>
+            
+                <h5>★ <em>Star Wars: A New Hope</em> (1977)</h5>
+                <p>
+                    <strong>Act I</strong>: Luke lives on Tatooine (ordinary world). R2‑D2 carries a message from Princess Leia (inciting incident). After his aunt and uncle are killed, Luke decides to join Obi‑Wan and leave with the droids (first plot point).<br>
+                    <strong>Act II</strong>: Luke learns the Force, meets Han and Chewie, and they rescue Leia. The Death Star plans are analysed (midpoint). They escape but Obi‑Wan is killed; the group is trapped on the Death Star (“all is lost”) until they devise a plan.<br>
+                    <strong>Act III</strong>: The Rebel assault on the Death Star (climax). Luke uses the Force to make the shot. The celebration scene shows the restored hope (denouement).
+                </p>
+            
+                <h5>★ <em>The Godfather</em> (1972)</h5>
+                <p>
+                    <strong>Act I</strong>: The Corleone family operates under Vito’s rule. At Connie’s wedding, we meet Michael, the “civilian” son. The inciting incident is the attempt on Vito’s life. Michael visits his father in the hospital and is later attacked by a corrupt police captain — he commits to the family business (first plot point).<br>
+                    <strong>Act II</strong>: Michael flees to Sicily; Sonny runs the family. The war with the Five Families escalates. Midpoint: Sonny is killed at the causeway. Michael’s wife Apollonia is killed by a car bomb — he is devastated. He returns to the U.S. and prepares to take over.<br>
+                    <strong>Act III</strong>: Michael consolidates power, becomes godfather to Connie’s child, and orchestrates the murder of the other dons (climax). The final scene shows Michael lying to Kay about his innocence — the new, cold Godfather is established.
+                </p>
+            
+                <h5>★ <em>Harry Potter and the Philosopher’s Stone</em> (2001)</h5>
+                <p>
+                    <strong>Act I</strong>: Harry lives unhappily with the Dursleys (ordinary world). Letters from Hogwarts arrive (inciting incident). Hagrid reveals Harry’s past and takes him to Diagon Alley (first plot point).<br>
+                    <strong>Act II</strong>: Harry learns magic, makes friends, and discovers the Philosopher’s Stone. The trio investigates the stone’s security. Midpoint: they learn that someone is trying to steal it. They face trials (devil’s snare, chess game) and Harry confronts the idea that Snape might be the villain. The darkest moment is when they realise the real threat is Quirrell, not Snape.<br>
+                    <strong>Act III</strong>: Harry faces Quirrell/Voldemort in the final chamber (climax). He wins through his mother’s protection. The denouement shows Gryffindor winning the House Cup and Harry returning to the Dursleys — changed but heading “home”.
+                </p><br>
+            
+                <h4>APA Sources</h4>
+                <p class="source-list" style="line-height: 1.8;">
+                    Aristotle. (1996). <em>Poetics</em> (M. Heath, Trans.). Penguin Classics.<br>
+                    Field, S. (2005). <em>Screenplay: The foundations of screenwriting</em> (Rev. ed.). Delta.<br>
+                    McKee, R. (1997). <em>Story: Substance, structure, style, and the principles of screenwriting</em>. ReganBooks.<br>
+                    Egri, L. (1946). <em>The art of dramatic writing</em>. Simon &amp; Schuster.<br>
+                    Snyder, B. (2005). <em>Save the Cat! The last book on screenwriting you’ll ever need</em>. Michael Wiese Productions.
+                </p>
+            </article>
+
+            <!-- ========== 2) THE HERO'S JOURNEY (MONOMYTH) ========== -->
+            <article class="info-card structure-item" data-structure-index="2">
+                <h3>2) The Hero's Journey (Monomyth)</h3>
+            
+                <p class="muted">
+                    The Hero's Journey, or monomyth, is a universal pattern of adventure and transformation found in myths, legends, and stories from around the world. It describes a cycle in which a hero leaves their ordinary world, faces trials, wins a victory, and returns home changed. Comparative mythologist Joseph Campbell identified this pattern, and screenwriter Christopher Vogler adapted it into a practical guide for writers.
+                </p>
+            
+                <h4>Historical Background</h4>
+                <p>
+                    Joseph Campbell’s <em>The Hero with a Thousand Faces</em> (1949) synthesised the work of Freud, Jung, and a wide range of world mythologies. He argued that all heroic narratives share a fundamental structure — the monomyth. In the 1990s, Disney story consultant Christopher Vogler distilled Campbell’s ideas into a seven‑page memo that later became <em>The Writer's Journey: Mythic Structure for Writers</em>. Vogler’s version, with its twelve stages, is widely used in Hollywood and by novelists.
+                </p>
+            
+                <h4>Detailed Breakdown of the Stages</h4>
+                <p>Vogler organises the journey into three acts and twelve stages, often grouped as Departure, Initiation, and Return.</p>
+            
+                <h5>Act I – Departure</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Ordinary World</strong>: The hero’s everyday life before the adventure begins.</li>
+                    <li><strong>Call to Adventure</strong>: A challenge or event that invites the hero to leave the familiar.</li>
+                    <li><strong>Refusal of the Call</strong>: The hero hesitates, often out of fear or duty.</li>
+                    <li><strong>Meeting the Mentor</strong>: A wise figure provides guidance, training, or a crucial gift.</li>
+                    <li><strong>Crossing the Threshold</strong>: The hero commits to the journey and enters the special world.</li>
+                </ul>
+            
+                <h5>Act II – Initiation</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Tests, Allies, and Enemies</strong>: The hero faces challenges, makes friends and foes, and learns the rules of the new world.</li>
+                    <li><strong>Approach to the Inmost Cave</strong>: The hero prepares for the central ordeal, often facing inner demons.</li>
+                    <li><strong>Ordeal</strong>: A life‑or‑death crisis — the hero’s darkest moment, from which they emerge transformed.</li>
+                    <li><strong>Reward (Seizing the Sword)</strong>: Having survived, the hero gains an object, knowledge, or power.</li>
+                </ul>
+            
+                <h5>Act III – Return</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>The Road Back</strong>: The hero tries to return to the ordinary world, but new dangers arise.</li>
+                    <li><strong>Resurrection</strong>: A final test where the hero must use everything they have learned; often a climax.</li>
+                    <li><strong>Return with the Elixir</strong>: The hero comes home bearing something that can heal or improve the ordinary world.</li>
+                </ul>
+            
+                <h4>Famous Examples & Implementation</h4>
+            
+                <h5>★ <em>The Lord of the Rings</em> (novels/films)</h5>
+                <p>
+                    <strong>Ordinary World</strong>: Frodo lives peacefully in the Shire.<br>
+                    <strong>Call to Adventure</strong>: Gandalf reveals the Ring’s true nature and tells Frodo to leave.<br>
+                    <strong>Refusal</strong>: “I am not made for perilous quests.”<br>
+                    <strong>Mentor</strong>: Gandalf guides him; later Aragorn and others become mentors.<br>
+                    <strong>Threshold</strong>: Leaving the Shire, then the encounter with the Black Riders.<br>
+                    <strong>Tests/Allies/Enemies</strong>: Meeting Strider, the Council of Elrond, the Fellowship.<br>
+                    <strong>Approach</strong>: The long journey to Mordor, Gollum’s betrayal.<br>
+                    <strong>Ordeal</strong>: At Mount Doom, Frodo succumbs to the Ring’s power — but Gollum’s intervention destroys it.<br>
+                    <strong>Reward</strong>: The Ring is destroyed; Middle‑earth saved.<br>
+                    <strong>Road Back</strong>: The Scouring of the Shire (in the book) — a final threat.<br>
+                    <strong>Resurrection</strong>: Frodo’s spiritual wound is healed as he sails to the Undying Lands.<br>
+                    <strong>Elixir</strong>: Peace returns to the Shire, and Sam uses his experiences to become a wise leader.
+                </p>
+            
+                <h5>★ <em>The Matrix</em> (1999)</h5>
+                <p>
+                    <strong>Ordinary World</strong>: Thomas Anderson (Neo) is a hacker living a dull life.<br>
+                    <strong>Call</strong>: Morpheus’s message “Follow the white rabbit.”<br>
+                    <strong>Refusal</strong>: Neo tries to escape the agents; he is captured.<br>
+                    <strong>Mentor</strong>: Morpheus trains him in the construct.<br>
+                    <strong>Threshold</strong>: Taking the red pill — Neo enters the real world.<br>
+                    <strong>Tests</strong>: Training simulations, meeting the Oracle, learning to trust his abilities.<br>
+                    <strong>Approach</strong>: Planning to rescue Morpheus from the agents.<br>
+                    <strong>Ordeal</strong>: Neo is killed by Agent Smith, but love (Trinity’s kiss) resurrects him.<br>
+                    <strong>Reward</strong>: Neo now sees the Matrix as code; he has superhuman powers.<br>
+                    <strong>Road Back</strong>: Confronting the Agents in the Matrix.<br>
+                    <strong>Resurrection</strong>: Neo’s final speech and his ability to stop bullets — he has become “the One.”<br>
+                    <strong>Elixir</strong>: He promises to free others, bringing hope to Zion.
+                </p>
+            
+                <h5>★ <em>The Lion King</em> (1994)</h5>
+                <p>
+                    <strong>Ordinary World</strong>: Simba is a carefree cub, heir to the Pride Lands.<br>
+                    <strong>Call</strong>: Mufasa shows him the kingdom and its responsibilities.<br>
+                    <strong>Refusal</strong>: Simba is too young and later, after Mufasa’s death, he runs away.<br>
+                    <strong>Mentor</strong>: Rafiki (and later Timon &amp; Pumbaa provide comic but important lessons).<br>
+                    <strong>Threshold</strong>: Simba leaves the Pride Lands for the jungle.<br>
+                    <strong>Tests</strong>: Learning “Hakuna Matata,” growing up, avoiding his past.<br>
+                    <strong>Approach</strong>: Rafiki confronts him and makes him see Mufasa’s spirit.<br>
+                    <strong>Ordeal</strong>: Simba accepts responsibility and returns to fight Scar.<br>
+                    <strong>Reward</strong>: He defeats Scar and reclaims his place.<br>
+                    <strong>Road Back</strong>: The Pride Lands are restored.<br>
+                    <strong>Resurrection</strong>: Simba takes his place as king, and the circle of life continues.<br>
+                    <strong>Elixir</strong>: His cub is born, ensuring the future.
+                </p>
+            
+                <h4>APA Sources</h4>
+                <p class="source-list" style="line-height: 1.8;">
+                    Campbell, J. (2008). <em>The hero with a thousand faces</em> (3rd ed.). New World Library.<br>
+                    Vogler, C. (2007). <em>The writer's journey: Mythic structure for writers</em> (3rd ed.). Michael Wiese Productions.<br>
+                    Voytilla, S. (1999). <em>Myth and the movies: Discovering the mythic structure of 50 unforgettable films</em>. Michael Wiese Productions.<br>
+                    Pearson, C. S. (1989). <em>The hero within: Six archetypes we live by</em>. Harper &amp; Row.
+                </p>
+            </article>
+            
+            <!-- ========== 3) FICHTEAN CURVE ========== -->
+            <article class="info-card structure-item" data-structure-index="3">
+                <h3>3) Fichtean Curve</h3>
+            
+                <p class="muted">
+                    Named after the German philosopher Johann Gottlieb Fichte, this narrative model prioritises tension and momentum by immersing the reader in a series of escalating crises from the very beginning. It minimises exposition and backstory, instead weaving them in as needed during moments of high conflict. The result is a story that feels urgent and immersive.
+                </p>
+            
+                <h4>Historical Background</h4>
+                <p>
+                    The term “Fichtean Curve” was popularised by writing teacher John Gardner and later elaborated by Jack Bickham in <em>Scene & Structure</em> (1993). It draws on Fichte’s dialectical philosophy (thesis, antithesis, synthesis) but adapts it to narrative: an initial crisis (thesis) is met with opposition (antithesis), leading to a new synthesis through the climax. Lisa Cron’s <em>Wired for Story</em> (2012) reinforces the psychological need for constant tension to hold a reader’s attention.
+                </p>
+            
+                <h4>Detailed Breakdown</h4>
+                <p>The Fichtean Curve is lean and fast‑paced. It typically follows this pattern:</p>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Inciting Incident (opening pages)</strong>: The story launches directly into a crisis — no lengthy setup.</li>
+                    <li><strong>Series of Crises (rising action)</strong>: Each scene presents a new obstacle or complication. Tension builds in a wave‑like pattern, with smaller peaks leading to the major climax.</li>
+                    <li><strong>Climax</strong>: The highest point of tension, where the central conflict is resolved — often through a final confrontation or decision.</li>
+                    <li><strong>Denouement (brief)</strong>: A short aftermath that shows the new normal; loose ends are tied quickly, if at all.</li>
+                </ul>
+                <p>Exposition and character background are not front‑loaded; they are revealed through action, dialogue, or flashback only when essential.</p>
+            
+                <h4>Famous Examples & Implementation</h4>
+            
+                <h5>★ <em>Misery</em> (novel by Stephen King, film 1990)</h5>
+                <p>
+                    <strong>Inciting Incident</strong>: Paul Sheldon crashes his car in a blizzard and is “rescued” by Annie Wilkes — his “number one fan.” Within pages, we know he is trapped.<br>
+                    <strong>Series of Crises</strong>: Annie forces him to write a new novel; she reads the manuscript and flies into rages; she hobbles him with an axe; he attempts escape multiple times, each attempt failing and raising the stakes.<br>
+                    <strong>Climax</strong>: Paul finally manages to kill Annie using the typewriter and other objects, then crawls to freedom.<br>
+                    <strong>Denouement</strong>: Brief scenes show Paul recovering, but he is forever changed — and haunted by the memory.
+                </p>
+            
+                <h5>★ <em>Die Hard</em> (1988)</h5>
+                <p>
+                    <strong>Inciting Incident</strong>: John McClane arrives at Nakatomi Plaza; almost immediately terrorists take over the building. He is already inside and becomes the sole hope.<br>
+                    <strong>Series of Crises</strong>: McClane evades the terrorists, kills several, communicates with the outside via walkie‑talkie, discovers the true nature of the heist, runs out of ammunition, gets injured, and must rescue hostages while the clock ticks.<br>
+                    <strong>Climax</strong>: He confronts Hans Gruber on the roof, saves his wife, and the explosives detonate.<br>
+                    <strong>Denouement</strong>: The police arrive, the media swarms, and McClane walks away with his wife — a short, satisfying wrap‑up.
+                </p>
+            
+                <h5>★ <em>The Most Dangerous Game</em> (short story by Richard Connell)</h5>
+                <p>
+                    <strong>Inciting Incident</strong>: Rainsford falls off his yacht and swims to Ship‑Trap Island — immediately in danger.<br>
+                    <strong>Series of Crises</strong>: He meets General Zaroff, learns of the “game,” refuses to participate, and becomes the hunted. Each night he must survive Zaroff’s hunt, building traps and outsmarting him, while his physical and mental limits are tested.<br>
+                    <strong>Climax</strong>: Rainsford jumps into the sea, swims to Zaroff’s chateau, and confronts him in his bedroom.<br>
+                    <strong>Denouement</strong>: A single line: “He had never slept in a better bed.” The story ends immediately after the climax, leaving the reader to imagine the aftermath.
+                </p>
+            
+                <h4>APA Sources</h4>
+                <p class="source-list" style="line-height: 1.8;">
+                    Bickham, J. M. (1993). <em>Scene & structure</em>. Writer's Digest Books.<br>
+                    Cron, L. (2012). <em>Wired for story: The writer's guide to using brain science to hook readers from the very first sentence</em>. Ten Speed Press.<br>
+                    Gardner, J. (1983). <em>The art of fiction: Notes on craft for young writers</em>. Vintage Books.<br>
+                    Cowgill, L. J. (1999). <em>Secrets of screenplay structure</em>. Lone Eagle Publishing.
+                </p>
+            </article>
+
+            <!-- ========== 4) IN MEDIAS RES ========== -->
+            <article class="info-card structure-item" data-structure-index="4">
+                <h3>4) In Medias Res</h3>
+            
+                <p class="muted">
+                    In medias res (Latin for “into the middle of things”) is a narrative technique that plunges the reader directly into the heart of the action, often at a critical moment, before revealing earlier events through flashback or exposition. This approach creates immediate engagement, curiosity, and emotional investment, making it a staple of epic poetry, thrillers, and literary fiction.
+                </p>
+            
+                <h4>Historical Background</h4>
+                <p>
+                    The term originates from Horace’s <em>Ars Poetica</em> (c. 19 BCE), where he praises Homer for beginning the <em>Iliad</em> not with the birth of Helen but <em>in medias res</em> — in the thick of the Trojan War. Homer’s <em>Odyssey</em> similarly opens with Odysseus held captive by Calypso, then uses flashbacks to recount his earlier adventures. In the 20th century, narratologists like Gérard Genette (1983) analysed how such anachronies (flashbacks and flash‑forwards) shape reader interpretation. Modern screenwriting often employs this technique to hook audiences within the first minutes.
+                </p>
+            
+                <h4>Core Characteristics</h4>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Opening at a Climactic or Pivotal Moment</strong>: The story starts when tensions are already high.</li>
+                    <li><strong>Strategic Exposition</strong>: Background information is delivered through dialogue, inner monologue, or brief flashbacks only when necessary.</li>
+                    <li><strong>Non‑Linear Narrative</strong>: The chronological order is disrupted, often using flashbacks or parallel plots to fill in the “before.”</li>
+                    <li><strong>Heightened Curiosity</strong>: Readers are compelled to ask “How did we get here?” and “What happens next?”</li>
+                </ul>
+            
+                <h4>Famous Examples & Implementation</h4>
+            
+                <h5>★ <em>The Odyssey</em> (Homer, c. 8th century BCE)</h5>
+                <p>
+                    <strong>Opening in medias res</strong>: The poem begins not with Odysseus leaving Troy, but ten years later, with him trapped on Calypso’s island. The gods debate his fate, and we meet Telemachus in Ithaca. Only later, through Odysseus’s own storytelling at the court of the Phaeacians, do we learn about the Cyclops, Circe, and the Sirens.<br>
+                    <strong>Effect</strong>: The audience is immediately confronted with the hero’s plight and the threat to his home, creating suspense about both past and future.
+                </p>
+            
+                <h5>★ <em>Pulp Fiction</em> (1994, dir. Quentin Tarantino)</h5>
+                <p>
+                    <strong>Opening in medias res</strong>: The film opens with a couple (Pumpkin and Honey Bunny) in a diner, mid‑conversation about robbing it. They suddenly draw guns — a shocking start. The narrative then jumps between interrelated stories, with scenes out of chronological order. For instance, Vincent and Jules’s earlier hit is shown later.<br>
+                    <strong>Effect</strong>: The fragmented timeline forces viewers to piece together cause and effect, making the film re‑watchable and thematically rich.
+                </p>
+            
+                <h5>★ <em>L.A. Confidential</em> (1997, dir. Curtis Hanson, based on James Ellroy’s novel)</h5>
+                <p>
+                    <strong>Opening in medias res</strong>: The film begins with a montage of police corruption and a tabloid scandal, then drops us into a police interrogation that is already underway. We are introduced to the three main detectives through this tense scene, and only later do we learn their backstories and motivations.<br>
+                    <strong>Effect</strong>: The fast‑paced opening establishes the gritty tone and moral ambiguity without delaying the plot with exposition.
+                </p>
+            
+                <h5>★ <em>Catch‑22</em> (Joseph Heller, 1961)</h5>
+                <p>
+                    <strong>Opening in medias res</strong>: The novel begins: “It was love at first sight. The first time Yossarian saw the chaplain he fell madly in love with him.” We are immediately inside the absurd world of the bomber crew; the narrative then loops through time, revisiting events from different perspectives.<br>
+                    <strong>Effect</strong>: Heller’s circular structure mirrors the novel’s theme of inescapable bureaucratic logic, drawing readers into the chaos.
+                </p>
+            
+                <h4>APA Sources</h4>
+                <p class="source-list" style="line-height: 1.8;">
+                    Genette, G. (1983). <em>Narrative discourse: An essay in method</em> (J. E. Lewin, Trans.). Cornell University Press.<br>
+                    Homer. (1996). <em>The Odyssey</em> (R. Fagles, Trans.). Penguin Classics.<br>
+                    Horace. (1926). <em>Satires, Epistles and Ars Poetica</em> (H. R. Fairclough, Trans.). Harvard University Press.<br>
+                    Sternberg, M. (1978). <em>Expositional modes and temporal ordering in fiction</em>. Johns Hopkins University Press.
+                </p>
+            </article>
+            
+            <!-- ========== 5) SAVE THE CAT BEAT SHEET ========== -->
+            <article class="info-card structure-item" data-structure-index="5">
+                <h3>5) Save the Cat Beat Sheet</h3>
+            
+                <p class="muted">
+                    Created by screenwriter Blake Snyder, the Save the Cat Beat Sheet is a popular story‑structuring method that breaks a narrative into 15 specific “beats” — key moments that ensure pacing, emotional shifts, and audience satisfaction. Originally designed for screenplays, it has been adapted for novelists by Jessica Brody. The name comes from the idea that the hero should do something likable early on (like saving a cat) to win the audience’s sympathy.
+                </p>
+            
+                <h4>Historical Background</h4>
+                <p>
+                    Blake Snyder, a successful Hollywood screenwriter, synthesised his experience into the book <em>Save the Cat! The Last Book on Screenwriting You’ll Ever Need</em> (2005). The beat sheet distilled the three‑act structure into a practical, page‑count‑based template. It became a staple in screenwriting circles. In 2018, Jessica Brody adapted it for novelists in <em>Save the Cat! Writes a Novel</em>, showing how the same 15 beats apply to fiction.
+                </p>
+            
+                <h4>The 15 Beats Explained</h4>
+                <p>The beats are typically mapped to page numbers (for a 110‑page script) or percentages. Below is the sequence with brief descriptions:</p>
+            
+                <h5>Act I (The Setup) — approx. first 20%</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>1. Opening Image</strong>: A snapshot of the protagonist’s world before the adventure — the “before” picture.</li>
+                    <li><strong>2. Theme Stated</strong>: A character (often not the hero) hints at the life lesson the hero needs to learn.</li>
+                    <li><strong>3. Set‑up</strong>: Explore the hero’s ordinary life, relationships, and flaws. Also introduce supporting characters.</li>
+                    <li><strong>4. Catalyst</strong>: The inciting incident — an event that disrupts the hero’s world and propels them into action.</li>
+                    <li><strong>5. Debate</strong>: The hero questions whether to go on the journey; they are torn between the familiar and the unknown.</li>
+                </ul>
+            
+                <h5>Act II (The Confrontation) — middle 60%</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>6. Break into Two</strong>: The hero makes a decision and leaves the ordinary world, entering a new situation.</li>
+                    <li><strong>7. B Story</strong>: A secondary storyline, often a love interest or mentorship, that helps explore the theme.</li>
+                    <li><strong>8. Fun and Games</strong>: The “trailer moments” — the hero shows off, faces fun challenges, or experiences the new world’s promise.</li>
+                    <li><strong>9. Midpoint</strong>: A major turning point (either a false victory or false defeat) that raises the stakes.</li>
+                    <li><strong>10. Bad Guys Close In</strong>: The antagonistic forces tighten their grip; internal or external obstacles multiply.</li>
+                    <li><strong>11. All Is Lost</strong>: A devastating setback — the hero’s lowest moment. Often includes a “whiff of death.”</li>
+                    <li><strong>12. Dark Night of the Soul</strong>: The hero mourns and reflects, then finds a new resolve or insight.</li>
+                </ul>
+            
+                <h5>Act III (The Resolution) — final 20%</h5>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>13. Break into Three</strong>: Armed with new understanding, the hero takes action to resolve the conflict.</li>
+                    <li><strong>14. Finale</strong>: The climax — the hero confronts the antagonist or final challenge, applying everything learned.</li>
+                    <li><strong>15. Final Image</strong>: A mirror of the opening image, showing how the hero and world have changed.</li>
+                </ul>
+            
+                <h4>Famous Example: <em>The Matrix</em> (1999)</h4>
+                <p>
+                    <strong>Opening Image</strong>: Trinity is chased by agents — a thrilling glimpse of the world to come.<br>
+                    <strong>Theme Stated</strong>: “What is real? How do you define ‘real’?” (spoken by Cypher later, but the idea echoes throughout).<br>
+                    <strong>Set‑up</strong>: Thomas Anderson (Neo) works a dull job, hacks at night, and feels something is wrong.<br>
+                    <strong>Catalyst</strong>: Morpheus’s message: “Follow the white rabbit.” Neo meets Trinity and is taken to see Morpheus.<br>
+                    <strong>Debate</strong>: Neo hesitates, unsure whether to trust Morpheus; he eventually accepts the red pill.<br>
+                    <strong>Break into Two</strong>: Neo is unplugged from the Matrix and reborn in the real world.<br>
+                    <strong>B Story</strong>: The love story with Trinity and the mentorship of Morpheus.<br>
+                    <strong>Fun and Games</strong>: Training sequences — Neo learns kung fu, jumps between buildings, begins to believe.<br>
+                    <strong>Midpoint</strong>: Neo meets the Oracle, who tells him he’s not the One. This is a false defeat.<br>
+                    <strong>Bad Guys Close In</strong>: Cypher betrays them; Morpheus is captured; agents close in.<br>
+                    <strong>All Is Lost</strong>: Neo and Trinity decide to rescue Morpheus; Neo is shot and killed by Agent Smith.<br>
+                    <strong>Dark Night of the Soul</strong>: Trinity whispers that the Oracle said she would fall in love with the One — and kisses him; Neo revives.<br>
+                    <strong>Break into Three</strong>: Neo now sees the Matrix as code; he stops bullets and fights with new power.<br>
+                    <strong>Finale</strong>: Neo destroys Agent Smith and escapes the Matrix, then makes a phone call promising to free others.<br>
+                    <strong>Final Image</strong>: Neo flies up into the sky — a powerful contrast to the opening’s helplessness.
+                </p>
+            
+                <h4>APA Sources</h4>
+                <p class="source-list" style="line-height: 1.8;">
+                    Brody, J. (2018). <em>Save the Cat! Writes a novel</em>. Ten Speed Press.<br>
+                    Snyder, B. (2005). <em>Save the Cat! The last book on screenwriting you’ll ever need</em>. Michael Wiese Productions.<br>
+                    Snyder, B. (2007). <em>Save the Cat! goes to the movies: The screenwriter’s guide to every story ever told</em>. Michael Wiese Productions.
+                </p>
+            </article>
+
+            <article class="info-card structure-item">
+                <h3>6) Freytag's Pyramid</h3>
+                <p class="muted">Freytag formalized a five-part dramatic arc based on tragic and classical forms: exposition, rising action, climax, falling action, catastrophe/denouement. It remains influential in narrative pedagogy and plot diagnostics (Freytag, 1894/1968; Abbott, 2008).</p>
+                <p><strong>Core movement:</strong> Exposition → rising action → climax → falling action → resolution.</p>
+                <p><strong>Best for:</strong> Drama, tragedy, and stories where cause-and-effect symmetry is central.</p>
+                <p class="source-list"><strong>APA sources:</strong> Abbott, H. P. (2008). <em>The Cambridge introduction to narrative</em> (2nd ed.). Cambridge University Press. https://doi.org/10.1017/CBO9780511816932 · Freytag, G. (1968). <em>Technique of the drama</em> (E. J. MacEwan, Trans.). Benjamin Blom. (Original work published 1894). https://archive.org/details/techniqueofdrama00freyuoft</p>
+            </article>
+
+            <article class="info-card structure-item">
+                <h3>7) Kishōtenketsu (Four-Act East Asian Structure)</h3>
+                <p class="muted">Kishōtenketsu emphasizes development through contrast rather than direct conflict, often organized as introduction, development, twist, and reconciliation. Comparative narrative research highlights its distinct logic in Japanese and Chinese storytelling traditions (Kato, 2007; Herman et al., 2010).</p>
+                <p><strong>Core movement:</strong> Ki (setup), Shō (expansion), Ten (turn/twist), Ketsu (integration).</p>
+                <p><strong>Best for:</strong> Reflective fiction, slice-of-life, and stories driven by thematic juxtaposition.</p>
+                <p class="source-list"><strong>APA sources:</strong> Herman, D., Jahn, M., &amp; Ryan, M.-L. (Eds.). (2010). <em>Routledge encyclopedia of narrative theory</em>. Routledge. https://www.routledge.com/Routledge-Encyclopedia-of-Narrative-Theory/Herman-Jahn-Ryan/p/book/9780415775120 · Kato, S. (2007). <em>A history of Japanese literature: The first thousand years</em>. Routledge. https://www.routledge.com/A-History-of-Japanese-Literature-Volume-1-The-First-Thousand-Years/Kato/p/book/9781138971448</p>
+            </article>
+
+            <article class="info-card structure-item">
+                <h3>8) Seven-Point Story Structure</h3>
+                <p class="muted">Popularized in contemporary speculative fiction circles, this design starts with endpoint clarity and reverse-engineers major turning points. Narrative design literature supports this as a useful heuristic for balancing global arc and local scene logic (Bell, 2004; Weiland, 2013).</p>
+                <p><strong>Core movement:</strong> Hook, plot turn 1, pinch point 1, midpoint, pinch point 2, plot turn 2, resolution.</p>
+                <p><strong>Best for:</strong> Novels requiring clear macro-structure, especially fantasy and science fiction series.</p>
+                <p class="source-list"><strong>APA sources:</strong> Bell, J. S. (2004). <em>Plot &amp; structure</em>. Writer's Digest Books. https://www.penguinrandomhouse.com/books/536462/plot-and-structure-by-james-scott-bell/ · Weiland, K. M. (2013). <em>Structuring your novel: Essential keys for writing an outstanding story</em>. Penforasword Publishing. https://www.helpingwritersbecomeauthors.com/books/structuring-your-novel/</p>
+            </article>
+
+            <article class="info-card structure-item">
+                <h3>9) Snowflake Method</h3>
+                <p class="muted">This fractal planning approach expands a story from one sentence to full scenes in iterative layers, integrating premise, character arc, and plot architecture. Composition research supports staged elaboration as a way to reduce cognitive overload in complex drafting tasks (Ingermanson, 2014; Flower &amp; Hayes, 1981).</p>
+                <p><strong>Core movement:</strong> One-sentence summary → paragraph summary → character sheets → expanded synopsis → scene list → draft.</p>
+                <p><strong>Best for:</strong> Writers who prefer robust prewriting and iterative refinement before drafting.</p>
+                <p class="source-list"><strong>APA sources:</strong> Flower, L., &amp; Hayes, J. R. (1981). A cognitive process theory of writing. <em>College Composition and Communication, 32</em>(4), 365-387. https://doi.org/10.2307/356600 · Ingermanson, R. (2014). <em>How to write a novel using the Snowflake Method</em>. Advanced Fiction Writing. https://www.advancedfictionwriting.com/articles/snowflake-method/</p>
+            </article>
+
+            <article class="info-card structure-item">
+                <h3>10) Dan Harmon's Story Circle</h3>
+                <p class="muted">Adapted from Campbellian cycles, this eight-step loop frames change through need, adaptation, and return with cost. Its compact symmetry is frequently used for episodic and serialized storytelling where repeatable character transformation is required (Harmon, 2018; McKee, 1997).</p>
+                <p><strong>Core movement:</strong> You, need, go, search, find, take, return, change.</p>
+                <p><strong>Best for:</strong> Television episodes, serialized fiction, and character-centric arcs with cyclical growth.</p>
+                <p class="source-list"><strong>APA sources:</strong> Harmon, D. (2018). <em>Story structure 101: Super basic sh*t</em>. Channel 101 Wiki. https://channel101.fandom.com/wiki/Story_Structure_101:_Super_Basic_Shit · McKee, R. (1997). <em>Story: Substance, structure, style, and the principles of screenwriting</em>. ReganBooks. https://www.harpercollins.com/products/story-robert-mckee</p>
+            </article>
         </section>
     </main>
 </div>
