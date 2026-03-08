@@ -36,6 +36,35 @@ body {
     padding: 24px;
 }
 
+img {
+    width: 100%;
+}
+
+.brand-logo {
+    height: 2.5rem;
+    width: auto;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+/* Light mode */
+body:not([data-theme="dark"]) .brand-logo {
+    filter: 
+        brightness(0) 
+        saturate(100%) 
+        invert(32%) 
+        sepia(95%) 
+        saturate(7421%) 
+        hue-rotate(223deg) 
+        brightness(101%) 
+        contrast(104%);
+}
+
+/* Dark mode */
+body[data-theme="dark"] .brand-logo {
+    filter: brightness(0) invert(0.93);
+}
+
 .app-shell {
     max-width: 1320px;
     margin: 0 auto;
