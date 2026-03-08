@@ -1,8 +1,25 @@
 .structures-grid {
     display: grid;
-    gap: 12px;
+    gap: 14px;
 }
 
 .structure-item {
     border-left: 4px solid var(--primary);
+    display: grid;
+    gap: 8px;
+}
+
+.structure-item h3 {
+    margin-bottom: 2px;
+}
+
+.structure-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.source-list {
+    font-size: 0.92rem;
+    border-top: 1px dashed rgba(127, 127, 127, 0.35);
+    padding-top: 8px;
 }
