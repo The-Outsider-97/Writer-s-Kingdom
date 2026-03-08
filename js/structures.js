@@ -1,5 +1,5 @@
 (() => {
     document.querySelectorAll('.structure-item').forEach((item, index) => {
-        item.querySelector('.muted').textContent += ` • Reference ${index + 1}`;
+        item.setAttribute('data-structure-index', String(index + 1));
     });
 })();
